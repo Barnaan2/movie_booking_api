@@ -1,14 +1,14 @@
-from dataclasses import field
+
 from rest_framework import serializers
 from . models import Cinema, Movie
 
 
-class MovieSerializer(serializers.Serializer):
+class MovieSerializer(serializers.ModelSerializer):
    class Meta:
       model = Movie
-      field = '__all__'
+      fields = '__all__'
 
-class Cinema(serializers.Serializer):
+class CinemaSerializer(serializers.ModelSerializer):
    class Meta:
       model = Cinema
-      field = '__all__'
+      fields = '__all__'
