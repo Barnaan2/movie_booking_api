@@ -1,11 +1,11 @@
-asgiref @ file:///C:/Users/Barnaan/Downloads/asgiref-3.5.2-py3-none-any.whl
-distlib @ file:///C:/Users/Barnaan/Downloads/distlib-0.3.6-py2.py3-none-any.whl
-Django @ file:///C:/Users/Barnaan/Downloads/Django-4.1.2-py3-none-any.whl
-django-cors-headers @ file:///C:/Users/Barnaan/Downloads/django_cors_headers-3.13.0-py3-none-any.whl
-djangorestframework @ file:///C:/Users/Barnaan/Downloads/djangorestframework-3.14.0-py3-none-any.whl
-filelock @ file:///C:/Users/Barnaan/Downloads/filelock-3.8.0-py3-none-any.whl
-platformdirs @ file:///C:/Users/Barnaan/Downloads/platformdirs-2.5.2-py3-none-any.whl
-pytz @ file:///C:/Users/Barnaan/Downloads/pytz-2022.4-py2.py3-none-any.whl
-sqlparse @ file:///C:/Users/Barnaan/Downloads/sqlparse-0.4.3-py3-none-any.whl
-tzdata @ file:///C:/Users/Barnaan/Downloads/tzdata-2022.4-py2.py3-none-any.whl
-virtualenv @ file:///C:/Users/Barnaan/Downloads/virtualenv-20.16.5-py3-none-any.whl
+asgiref-3.5.2-py3-none-any.whl
+distlib-0.3.6-py2.py3-none-any.whl
+Django-4.1.2-py3-none-any.whl
+django_cors_headers-3.13.0-py3-none-any.whl
+djangorestframework-3.14.0-py3-none-any.whl
+filelock-3.8.0-py3-none-any.whl
+platformdirs-2.5.2-py3-none-any.whl
+pytz-2022.4-py2.py3-none-any.whl
+sqlparse-0.4.3-py3-none-any.whl
+tzdata-2022.4-py2.py3-none-any.whl
+
