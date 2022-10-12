@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Screen , MovieShow
 
-# Register your models here.
+
+admin.site.register(Screen)
+admin.site.register(MovieShow)
+

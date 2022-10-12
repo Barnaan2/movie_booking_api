@@ -1,0 +1,6 @@
+                  DEBO MOVIE BOOKING DOCUMENTATION:
+    This Api will be fully open source so you can contribute if you are already here.
+    The main purpose of this project is to create an efficent api for Ethiopian Movies
+
+"I you could Imagine it, You can Build it "
+ I said That :)  Thank you!!
