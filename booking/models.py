@@ -1,16 +1,20 @@
+from email.policy import default
 from django.db import models
-from cinema.models import MovieShow
+from cinema.models import MovieShow,MovieshowSeat
+from django.contrib.auth.models import User
 
 
 # Create your models here.
 class BookingRequest(models.Model):
-    movie_show = models.ForeignKey(MovieShow,on_delete=models.CASCADE)
-    user_email = models.CharField(max_length=200,null=True)
-    user_phone_number = models.CharField(max_length=200)
-    seat =models.CharField(max_length = 100)
+    movie_show_seat = models.ForeignKey(MovieshowSeat,on_delete=models.CASCADE)
+    user = models.ForeignKey(User,on_delete=models.SET_NULL)
+    movie_show_seat =models.ForeignKey(MovieshowSeat,on_delete=models.CASCADE)
+    price = models.FloatField()
+    status = models.CharField(default="waiting",max_length=20)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
+
     def __str__(self):
         return self.movie_show
-
+ 
