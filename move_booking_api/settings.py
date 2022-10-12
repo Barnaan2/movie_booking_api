@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'system_admin',
+    'payment',
+    'booking',
     'cinema',
     'rest_framework',
      'corsheaders',
