@@ -10,12 +10,12 @@ Don't judge ,just correct them and make pull request.
 
      ********Cinema Seat Reservation Concept:**************
 
-Every cinema have a seats which going to be reserved by the customer
-so those seats are reserved by the customer, only if  there is a movie to be 
-shown in the cinema(meaning that every seat should have MovieShow object so the will create MovieShowseat Object). 
+Every cinema have a seats which going to be reserved by the customer.
+so those seats are reserved by the customer only if  there is a movie to be 
+shown in the cinema(meaning that every seat should have MovieShow object so they will create MovieShowseat Object). 
 
 When a cinema adds a movie to show there will be a whole cinema seats to be reserved.
-a seat will be in one of the two states  " 1. RESERVED OR 2. FREE " .
+a seat will be in one of  two states  " 1. RESERVED OR 2. FREE " .
 
   1. when the seat is reserved it may be in one of two cases:
     1.1, the reserve may be parmanent :- which means that the customer paid the ticket fee
@@ -26,4 +26,8 @@ a seat will be in one of the two states  " 1. RESERVED OR 2. FREE " .
   
   2. whin the seat is free. it means there is no active request of customer to book for the seat so it is open for customers
 
-  
+   *** Seat reservation can be happen in two ways.
+   
+    1. as usual when the customer books for the seat
+    2. when the cinema owner or worker sell the ticket manually.
+  in both cases the seat that has been reserved  must be recorded in the database.
