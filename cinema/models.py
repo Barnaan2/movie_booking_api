@@ -16,26 +16,20 @@ class Screen(models.Model):
 
         """
         if number_of_seat = m:
-            if type == None:
                 seat = m
                 seat.save()
-            else:
-                for(items in request):
-                     type = items.type
-                     seat = items.seat
-                      seat.save()
+       
 
         """
 
-class Seat(models.Model):
-    screen = models.ForeignKey(Screen,on_delete=models.CASCADE,null=True)
-    type = models.CharField(max_length=200,default="Normal")
-    seat = models.IntegerField()
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now = True)
-
-def __str__(self):
-        return self.screen
+# class Seat(models.Model):
+#     screen = models.ForeignKey(Screen,on_delete=models.CASCADE,null=True)
+#     type = models.CharField(max_length=200,default="Normal")
+#     seat = models.IntegerField()
+#     created_at = models.DateTimeField(auto_now_add = True)
+#     updated_at = models.DateTimeField(auto_now = True)
+# def __str__(self):
+#         return self.screen
 
 """
 
@@ -80,11 +74,10 @@ for(type = in seat_types ):
     
 class MovieshowSeat(models.Model):
     movie_show = models.ForeignKey(MovieShow,on_delete=models.CASCADE) 
-    seat = models.ForeignKey(Seat,on_delete=models.CASCADE)
-    seat_type = models.CharField(max_length=50)
+    seat_number = models.IntegerField()
     price = models.FloatField() 
     reserved = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
-    def __str__(self):
-        return self.reserved
+    def __int__(self):
+        return self.seat_number
