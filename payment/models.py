@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from booking.models import BookingRequest
+from booking.models import Book
 from system_admin.models import Cinema
 
 # Create your models here.
@@ -45,7 +45,7 @@ class PaymentInformation(models.Model):
 
    
 class FinishPayment(models.Model):
-    booking=models.OneToOneField(BookingRequest, on_delete=models.CASCADE, primary_key=True, related_name="finishpymnt_booking")
+    booking=models.OneToOneField(Book, on_delete=models.CASCADE, primary_key=True, related_name="finishpymnt_booking")
     payment_information = models.ForeignKey(PaymentInformation, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100)
     transaction_id=models.CharField(max_length=255, null=True)

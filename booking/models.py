@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-class BookingRequest(models.Model):
+class Book(models.Model):
     movie_show_seat = models.ForeignKey(MovieshowSeat,on_delete=models.CASCADE)
     user = models.ForeignKey(User,on_delete=models.SET_NULL)
     price = models.FloatField()
