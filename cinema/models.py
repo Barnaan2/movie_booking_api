@@ -1,17 +1,28 @@
-from email.policy import default
 from django.db import models
 from system_admin.models import Cinema, Movie
+from django.db.models.signals import post_save,post_delete
+
+class Facility(models.Model):
+    name = models.CharField(max_length=50)
+    type = models.CharField(max_length=60)
+    created_at = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now = True)
+
+    def __str__(self):
+        return str(self.name)
+
+
 
 class Screen(models.Model):
     cinema = models.ForeignKey(Cinema,on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=50)
-    feature = models.CharField(max_length = 100,null=True)
+    facility = models.ManyToManyField(Facility,null=True,on_delete=models.CASCADE,blank=True)
     number_of_seat = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
         """
@@ -38,12 +49,16 @@ class Screen(models.Model):
 
 """
 class MovieShow(models.Model):
-    movie = models.ForeignKey(Movie,on_delete=models.SET_NULL, null=True)
+    movie = models.ForeignKey(Movie,on_delete=models.SET_NULL, null=True,blank=True)
     screen = models.ForeignKey(Screen,on_delete=models.SET_NULL, null=True)
     schedule = models.DateTimeField()
+    price = models.FloatField() 
     sold_ticket = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
+
+    class Meta:
+        ordering = ['schedule']
 
     def __str__(self):
         return self.movie
@@ -73,11 +88,36 @@ for(type = in seat_types ):
 """
     
 class MovieshowSeat(models.Model):
-    movie_show = models.ForeignKey(MovieShow,on_delete=models.CASCADE) 
+    movie_show = models.ForeignKey(MovieShow,on_delete=models.SET_NULL,null=True,blank=True) 
     seat_number = models.IntegerField()
-    price = models.FloatField() 
     reserved = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
+
     def __int__(self):
-        return self.seat_number
+        return int(self.seat_number)
+    
+
+# signals
+def create_movieshow_seat(sender,instance,created,**kwargs):
+    if(created):
+        movie_show = instance
+        #python range never includes the last index so we add one to the original number
+        seats = int(movie_show.screen.number_of_seat) + 1
+        for seat in range(1,seats):
+            MovieshowSeat.objects.create(movie_show=movie_show,seat_number=seat)
+
+post_save.connect(create_movieshow_seat,sender=MovieShow)
+            
+
+def update_screen_seat(sender,instance,created, **kwargs):
+    screen = instance
+    if not created:
+        screen_seats = MovieshowSeat.objects.filter(movie_show__screen=screen)
+        for screen_seat in screen_seats:
+            if not screen_seat.reserved:
+                if screen_seat.seat_number > screen.number_of_seat:
+                    screen_seat.delete()
+post_save.connect(update_screen_seat,sender=Screen)
+
+

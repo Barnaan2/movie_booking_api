@@ -1,10 +1,7 @@
-from email.policy import default
 from django.db import models
 from cinema.models import MovieShow,MovieshowSeat
 from django.contrib.auth.models import User
 
-
-# Create your models here.
 class Book(models.Model):
     movie_show_seat = models.ForeignKey(MovieshowSeat,on_delete=models.CASCADE)
     user = models.ForeignKey(User,on_delete=models.SET_NULL)
