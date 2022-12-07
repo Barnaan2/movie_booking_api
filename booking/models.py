@@ -10,6 +10,8 @@ class Book(models.Model):
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
+    class Meta:
+      ordering = ['status']
 
     def __str__(self):
         return self.movie_show_seat
@@ -20,3 +22,9 @@ class Audience(models.Model):
     movie_show_seat = models.ForeignKey(MovieshowSeat,on_delete=models.CASCADE,null=True,blank=True)
     name=models.CharField(max_length=255, null=True)
     contact=models.CharField(max_length=255, null=True)
+
+    class Meta:
+      ordering = ['book']
+
+    def __str__(self):
+        return str(self.name)
