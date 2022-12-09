@@ -1,10 +1,10 @@
 from django.db import models
 from cinema.models import MovieShow,MovieshowSeat
-from django.contrib.auth.models import User
+from user.models import User
 
 class Book(models.Model):
-    movie_show_seat=models.ManyToManyField(MovieshowSeat,null=True,blank=True) 
-    user = models.ForeignKey(User,on_delete=models.SET_NULL)
+    movie_show_seat=models.ManyToManyField(MovieshowSeat,blank=True) 
+    user = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
     price = models.FloatField()
     status = models.CharField(default="waiting",max_length=20,null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add = True)

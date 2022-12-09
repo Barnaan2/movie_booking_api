@@ -16,7 +16,7 @@ class Facility(models.Model):
 class Screen(models.Model):
     cinema = models.ForeignKey(Cinema,on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=50)
-    facility = models.ManyToManyField(Facility,null=True,on_delete=models.CASCADE,blank=True)
+    facility = models.ManyToManyField(Facility,blank=True)
     number_of_seat = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
