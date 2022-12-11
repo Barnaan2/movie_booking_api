@@ -1,5 +1,5 @@
 from django.db import models
-from user.models import User
+from user.models import Profile
 
 
 class City(models.Model):
@@ -18,7 +18,7 @@ class City(models.Model):
 
 class Cinema(models.Model):
     name = models.CharField(max_length=50)
-    admin = models.ManyToManyField(User, blank=True)
+    admin = models.ManyToManyField(Profile, blank=True)
 #   screen is used in place of hall the movie contains or as room of hotel
     number_of_screen = models.IntegerField()
     city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True)

@@ -1,5 +1,8 @@
 from django.contrib import admin
-# from .models import BookingRequest
-# admin.site.register(BookingRequest)
-# Register your models here.
-  
+from .models import BookingRequest
+from . models import Audience
+
+
+
+admin.site.register(BookingRequest)
+admin.site.register(Audience)

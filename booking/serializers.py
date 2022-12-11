@@ -1,11 +1,11 @@
 
 from rest_framework import serializers
-from . models import Book
+from . models import BookingRequest
 
 
 class BookSerializer(serializers.ModelSerializer):
    class Meta:
-      model = Book
+      model = BookingRequest
       fields = '__all__'
 
 

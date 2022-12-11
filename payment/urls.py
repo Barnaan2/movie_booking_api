@@ -7,4 +7,3 @@ urlpatterns = [
     # path('movies/',views.movies),
     # path('cinema/',views.cinema),
 ]
-
