@@ -34,25 +34,25 @@ class Meta:
     
     """
     
-# def create_profile(sender,instance,created,**kwargs):
-#     if created:
-#         user = instance
-#         Profile.objects.create(user=user,phone_number = user.phone_number)
+def create_profile(sender,instance,created,**kwargs):
+    if created:
+        user = instance
+        Profile.objects.create(user=user,phone_number = user.phone_number)
         
         
         
-# post_save(create_profile,sender=User)
+post_save(create_profile,sender=User)
 
-# def delete_user(sender,instance,created,**kwargs):
-#     user = instance.user
-#     user.delete()
+def delete_user(sender,instance,created,**kwargs):
+    user = instance.user
+    user.delete()
     
-# post_delete(delete_user,sender=Profile)
+post_delete(delete_user,sender=Profile)
 
-# def update_profile(sender,instance,created,**kwargs):
-#     if not created:
-#         user = instance.user
-#         user.phone_number = instance.phone_number
-#         user.email = instance.email
-#         user.save()
-# post_save(update_profile,sender=Profile)
+def update_profile(sender,instance,created,**kwargs):
+    if not created:
+        user = instance.user
+        user.phone_number = instance.phone_number
+        user.email = instance.email
+        user.save()
+post_save(update_profile,sender=Profile)

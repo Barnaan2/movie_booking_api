@@ -2,7 +2,7 @@
     This Api will be fully open source so you can contribute if you are already here.
     The main purpose of this project is to create an efficent api for Ethiopian Movies
 
-"I you could Imagine it, You can Build it "
+"If you could Imagine it, You can Build it "
  I said That :)  Thank you!!
 
 Notice = There may be some spelling and grammatical error in this sentence!  
@@ -24,10 +24,13 @@ a seat will be in one of  two states  " 1. RESERVED OR 2. FREE " .
  In the case provided in 1.1 the seat for will not be aviliable for other customers the who paid owns this seat of the entire show.
  In the case provided in  1.2 the seat will be free again and another customer can book for the seat
   
-  2. whin the seat is free. it means there is no active request of customer to book for the seat so it is open for customers
+  2. when the seat is free. it means there is no active request of customer to book for the seat so it is open for customers
 
    *** Seat reservation can be happen in two ways.
    
     1. as usual when the customer books for the seat
     2. when the cinema owner or worker sell the ticket manually.
   in both cases the seat that has been reserved  must be recorded in the database.
+1. Here everything depends on our system and we will handle everything for ourselves.
+2. when the cinema sell the ticket for specific room it should provide the sold seat to the system
+to help us syncronise the system.
