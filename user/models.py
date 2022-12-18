@@ -41,13 +41,13 @@ def create_profile(sender,instance,created,**kwargs):
         
         
         
-post_save(create_profile,sender=User)
+# post_save(create_profile,sender=User)
 
 def delete_user(sender,instance,created,**kwargs):
     user = instance.user
     user.delete()
     
-post_delete(delete_user,sender=Profile)
+# post_delete(delete_user,sender=Profile)
 
 def update_profile(sender,instance,created,**kwargs):
     if not created:
@@ -55,4 +55,4 @@ def update_profile(sender,instance,created,**kwargs):
         user.phone_number = instance.phone_number
         user.email = instance.email
         user.save()
-post_save(update_profile,sender=Profile)
+# post_save(update_profile,sender=Profile)

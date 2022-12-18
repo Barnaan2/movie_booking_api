@@ -33,7 +33,7 @@ class PaymentInformation(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     class Meta:
             ordering = ('-created', '-updated')
-            unique_together = [['hotel', 'payment_method']]
+            unique_together = [['cinema', 'payment_method']]
 
     def __str__(self):
         return str(self.account_number)
