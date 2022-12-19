@@ -1,50 +1,68 @@
-# from django.shortcuts import render
-# from rest_framework.response import Response
-# from . models import Movie,Crew,Cast,City
-# from cinema.models import Cinema
+from django.shortcuts import render,HttpResponse
+from rest_framework.response import Response
+from movie.models import Movie,Crew,Cast
+from cinema.models import Cinema,City,Facility
+from payment.models import PaymentMethod
 # from cinema.serializers CinemaSerializer
 # from . serializers import MovieSerializer,CrewSerializer,CastSerializer,CitySerializer
 # # just to turn the reponse to the django restframe work view
-# from rest_framework.decorators import api_view
-
-# @api_view(['GET'])
-# def index(request):
-#     endpoints = {
-#         'Movies':'http://127.0.0.1:8000/movies/',
-#         'cinema': 'http://127.0.0.1:8000/cinema/',
-#         'Cast':'http://127.0.0.1:8000/cast/',
-#         'crew': 'http://127.0.0.1:8000/crew/',
-#          'city': 'http://127.0.0.1:8000/city/'
-#     }
-#     return Response(endpoints)
-
-# @api_view(['GET'])
-# def movies(request):
-#     movies = Movie.objects.all()
-#     serialized_movie = MovieSerializer(movies,many=True)
-#     return Response(serialized_movie.data)
+from rest_framework.decorators import api_view,permission_classes
+from rest_framework.permissions import IsAuthenticated,IsAdminUser
 
 
-# @api_view(['GET'])
-# def cinema(request):
-#     cinemas = Cinema.objects.all()
-#     serialzed_cinema = CinemaSerializer(cinemas,many=True)
-#     return Response(serialzed_cinema.data)
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def add_movie(request):
+    cinemas = Movie.objects.create()
+    
+    return HttpResponse('You have added new Item')
 
-# @api_view(['GET'])
-# def crew(request):
-#     crew = Crew.objects.all()
-#     serialzed_crew = CrewSerializer(crew,many=True)
-#     return Response(serialzed_crew.data)
 
-# @api_view(['GET'])
-# def cast(request):
-#     cast = Cast.objects.all()
-#     serialzed_cast = CastSerializer(cast,many=True)
-#     return Response(serialzed_cast.data)
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def add_cinema(request):
+    cinemas = Cinema.objects.create()
+    
+    return HttpResponse('You have added new Item')
 
-# @api_view(['GET'])
-# def city(request):
-#     city = City.objects.all()
-#     serialzed_city = CitySerializer(city,many=True)
-#     return Response(serialzed_city.data)
+
+
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def add_city(request):
+     
+    City.objects.create()
+    return HttpResponse('You have added new city')
+
+
+
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def add_cast(request):
+     
+    Cast.objects.create()
+    return HttpResponse('You have added new cast')
+
+
+
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def add_crew(request):
+     
+    Crew.objects.create()
+    return HttpResponse('You have added new crew')
+
+
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def add_facility(request):
+     
+    Facility.objects.create()
+    return HttpResponse('You have added new crew')
+
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def add_payment_method(request):
+    
+    PaymentMethod.objects.create()
+    return HttpResponse('You have added new crew')

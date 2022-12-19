@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from . models import City,Cinema,Facility,Screen,MovieShow,MovieshowSeat
 from . serializers import CitySerializer,CinemaSerializer,FacilitySerializer,ScreenSerializer,MovieShowSerializer,MovieshowSeat
 from rest_framework.decorators import api_view,permission_classes
@@ -26,3 +26,17 @@ def facility(request):
     facility_data = FacilitySerializer(facility,many=True)
     return Response(facility_data.data)
  
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_crew(request):
+     
+    Screen.objects.create()
+    return HttpResponse('You have added new crew')
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_screen(request):
+     
+    Screen.objects.create()
+    return HttpResponse('You have added new crew')
