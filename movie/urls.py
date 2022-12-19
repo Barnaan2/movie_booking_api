@@ -8,4 +8,5 @@ urlpatterns = [
     path('cinema/',views.cinema),
     path('crew/',views.crew),
     path('cast/',views.cast),
+    path('add-cast/',views.add_cast)
 ]

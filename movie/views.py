@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from rest_framework.response import Response
 from . models import Movie,Crew,Cast
 from cinema.models import Cinema
 from cinema.serializers import CinemaSerializer
 from . serializers import MovieSerializer,CrewSerializer,CastSerializer
-# just to turn the reponse to the django restframe work view
+from rest_framework.decorators import api_view,permission_classes
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import api_view
 
 @api_view(['GET'])
@@ -19,6 +20,7 @@ def index(request):
     return Response(endpoints)
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def movies(request):
     movies = Movie.objects.all()
     serialized_movie = MovieSerializer(movies,many=True)
@@ -42,3 +44,13 @@ def cast(request):
     cast = Cast.objects.all()
     serialzed_cast = CastSerializer(cast,many=True)
     return Response(serialzed_cast.data)
+
+
+@api_view(['POST'])
+# @permission_classes([IsAuthenticated])
+def add_cast(request):
+    name = request.POST['name']
+    role = request.POST['role']
+    about = request.POST['about']
+    Cast.objects.create(name=name,role=role,about=about)
+    return HttpResponse("Done")

@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def city(request):
     city = City.objects.all()
     serialzed_city = CitySerializer(city,many=True)
@@ -13,7 +14,7 @@ def city(request):
 
 
 @api_view(['GET'])
-@permission_classes(IsAuthenticated)
+@permission_classes([IsAuthenticated])
 def cinema(request):
     cinema = Cinema.objects.all()
     cinema_data = CinemaSerializer(cinema,many=True)
