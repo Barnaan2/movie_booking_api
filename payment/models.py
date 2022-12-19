@@ -2,7 +2,8 @@ from django.db import models
 from user.models import Profile
 from booking.models import BookingRequest
 from cinema.models import Cinema
-
+  
+  
 class PaymentMethod(models.Model):
     name = models.CharField(max_length=55,null=True,blank=True)
     type = models.CharField(max_length=55,null=True,blank=True)

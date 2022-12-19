@@ -18,7 +18,6 @@ class MovieSerializer(serializers.ModelSerializer):
    cast = CastSerializer(many=True)
    crew = CrewSerializer(many=True)
    # crew_data = serializers.SerializerMethodField()
-   
    class Meta:
       model = Movie
       fields = '__all__'
