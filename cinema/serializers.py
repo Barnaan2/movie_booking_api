@@ -28,7 +28,7 @@ class CinemaSerializer(serializers.ModelSerializer):
       
 class ScreenSerializer(serializers.ModelSerializer):
    facility = FacilitySerializer(many=True)
-   cinema = CinemaSerializer(many=True)
+   cinema = CinemaSerializer(many=False)
    class Meta:
       model = Screen
       fields = '__all__'
