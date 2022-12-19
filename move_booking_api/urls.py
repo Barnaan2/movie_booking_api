@@ -19,7 +19,8 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('system_admin.urls')),
+    path('',include('movie.urls')),
+    path('system-admin/',include('system_admin.urls')),
     path('cinema/',include('cinema.urls')),
     path('booking/',include('booking.urls')),
     path('payment/',include('payment.urls')),

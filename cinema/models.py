@@ -1,6 +1,40 @@
 from django.db import models
-from system_admin.models import Cinema, Movie
+from movie.models import Movie
+from user.models import Profile
 from django.db.models.signals import post_save,post_delete
+
+
+
+class City(models.Model):
+    name = models.CharField(max_length=55, unique=True)
+    region = models.CharField(max_length=55, null=True)
+    country = models.CharField(max_length=55, null=True, default='Ethiopia')
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.name)
+
+
+
+
+class Cinema(models.Model):
+    name = models.CharField(max_length=50)
+    admin = models.ManyToManyField(Profile, blank=True)
+#   screen is used in place of hall the movie contains or as room of hotel
+    number_of_screen = models.IntegerField()
+    city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True)
+    relative_location = models.TextField()
+    absolute_location = models.TextField()
+    picture = models.ImageField()
+    description = models.TextField()
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.name)
+
+
 
 class Facility(models.Model):
     name = models.CharField(max_length=50)

@@ -1,36 +1,33 @@
 
-from rest_framework import serializers
-from . models import Cinema, Movie,Crew,City,Cast
+# from rest_framework import serializers
+# from . models import  Movie,Crew,City,Cast
 
 
-class CastSerializer(serializers.ModelSerializer):
-   class Meta:
-      model = Cast
-      fields = '__all__'
+# class CastSerializer(serializers.ModelSerializer):
+#    class Meta:
+#       model = Cast
+#       fields = '__all__'
    
-class CitySerializer(serializers.ModelSerializer):
-   class Meta:
-      model = City
-      fields = '__all__'
+# class CitySerializer(serializers.ModelSerializer):
+#    class Meta:
+#       model = City
+#       fields = '__all__'
    
-class CrewSerializer(serializers.ModelSerializer):
-   class Meta:
-      model = Crew
-      fields = '__all__'
+# class CrewSerializer(serializers.ModelSerializer):
+#    class Meta:
+#       model = Crew
+#       fields = '__all__'
    
-class MovieSerializer(serializers.ModelSerializer):
-   cast = CastSerializer(many=True)
-   crew = CrewSerializer(many=True)
-   # crew_data = serializers.SerializerMethodField()
+# class MovieSerializer(serializers.ModelSerializer):
+#    cast = CastSerializer(many=True)
+#    crew = CrewSerializer(many=True)
+#    # crew_data = serializers.SerializerMethodField()
    
-   class Meta:
-      model = Movie
-      fields = '__all__'
-   # def get_crew_data(self,obj):
-   #     crew = obj.objects.all()
-   #     datax = CrewSerializer(crew, many=True)
-   #     return datax.data
-class CinemaSerializer(serializers.ModelSerializer):
-   class Meta:
-      model = Cinema
-      fields = '__all__'
+#    class Meta:
+#       model = Movie
+#       fields = '__all__'
+#    # def get_crew_data(self,obj):
+#    #     crew = obj.objects.all()
+#    #     datax = CrewSerializer(crew, many=True)
+#    #     return datax.data
+
