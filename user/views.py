@@ -5,6 +5,10 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from .forms import NewUserCreationForm,ProfileForm
 from .models import User,Profile
+from . serializers import ProfileSerializer
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
 from django.contrib.auth.decorators import login_required
 
 
@@ -79,3 +83,10 @@ def logout_page(request):
     return redirect('index')
 
 
+
+
+@api_view(['GET'])
+def profile(request):
+    profile = Profile.objects.all()
+    profile_data = ProfileSerializer(profile,many=True)
+    return Response(profile_data.data)
