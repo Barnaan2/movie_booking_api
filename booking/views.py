@@ -6,6 +6,8 @@ from .serializers import BookingRequestSerializer
 
 
 @api_view(['GET'])
+
+
 def booking(request):
     booking_request = BookingRequest.objects.all()
     booking_request_data = BookingRequestSerializer(booking_request,many=True)

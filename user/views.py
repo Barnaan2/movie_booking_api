@@ -86,7 +86,7 @@ def logout_page(request):
 
 
 @api_view(['GET'])
-def profile(request):
+def profile_data(request):
     profile = Profile.objects.all()
     profile_data = ProfileSerializer(profile,many=True)
     return Response(profile_data.data)
