@@ -8,7 +8,7 @@ from rest_framework.decorators import api_view,permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import api_view
 from rest_framework import status
-from rest_framework import serializers
+from .validator import cast_validator
 
 @api_view(['GET']) 
 def index(request):
@@ -22,7 +22,7 @@ def index(request):
     return Response(endpoints)
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def movies(request):
     movies = Movie.objects.all()
     serialized_movie = MovieSerializer(movies,many=True)
@@ -49,14 +49,13 @@ def cast(request):
 
 
 @api_view(['POST'])
+#first the file path should be done
 # @permission_classes([IsAuthenticated])
 def add_cast(request):
     name = request.POST['name']
     role = request.POST['role']
-    if(role == 'barnaan'):
-         raise serializers.ValidationError('Validation that will be done in validation.py')
     about = request.POST['about']
+    cast_validator(role)
     Cast.objects.create(name=name,role=role,about=about)
-    
     return Response(status=status.HTTP_201_CREATED)
 

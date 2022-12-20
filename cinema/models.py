@@ -8,6 +8,7 @@ from django.db.models.signals import post_save,post_delete
 class City(models.Model):
     name = models.CharField(max_length=55, unique=True)
     region = models.CharField(max_length=55, null=True)
+    picture = models.ImageField(blank=True,null=True)
     country = models.CharField(max_length=55, null=True, default='Ethiopia')
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
@@ -96,6 +97,7 @@ def create_movieshow_seat(sender,instance,created,**kwargs):
         seats = int(movie_show.screen.number_of_seat) + 1
         for seat in range(1,seats):
             MovieshowSeat.objects.create(movie_show=movie_show,seat_number=seat)
+
 
 post_save.connect(create_movieshow_seat,sender=MovieShow)
             
