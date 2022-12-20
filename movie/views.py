@@ -7,8 +7,10 @@ from . serializers import MovieSerializer,CrewSerializer,CastSerializer
 from rest_framework.decorators import api_view,permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import api_view
+from rest_framework import status
+from rest_framework import serializers
 
-@api_view(['GET'])
+@api_view(['GET']) 
 def index(request):
     endpoints = {
         'Movies':'http://127.0.0.1:8000/movies/',
@@ -43,7 +45,7 @@ def crew(request):
 def cast(request):
     cast = Cast.objects.all()
     serialzed_cast = CastSerializer(cast,many=True)
-    return Response(serialzed_cast.data)
+    return Response(serialzed_cast.data,status=status.HTTP_404_NOT_FOUND)
 
 
 @api_view(['POST'])
@@ -51,6 +53,10 @@ def cast(request):
 def add_cast(request):
     name = request.POST['name']
     role = request.POST['role']
+    if(role == 'barnaan'):
+         raise serializers.ValidationError('Validation that will be done in validation.py')
     about = request.POST['about']
     Cast.objects.create(name=name,role=role,about=about)
-    return HttpResponse("Done")
+    
+    return Response(status=status.HTTP_201_CREATED)
+
