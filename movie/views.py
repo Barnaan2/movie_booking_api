@@ -13,10 +13,10 @@ from .validator import cast_validator
 @api_view(['GET']) 
 def index(request):
     endpoints = {
-        'Movies':'http://127.0.0.1:8000/movies/',
-        'cinema': 'http://127.0.0.1:8000/cinema/',
-        'Cast':'http://127.0.0.1:8000/cast/',
-        'crew': 'http://127.0.0.1:8000/crew/'
+        'Movies':'http://192.168.0.24:8000/movies/',
+        'cinema': 'http://192.168.0.24:8000/cinema/',
+        'Cast':'http://192.168.0.24:8000/cast/',
+        'crew': 'http://192.168.0.24:8000/crew/'
         
     }
     return Response(endpoints)
