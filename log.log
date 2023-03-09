@@ -1,0 +1,106 @@
+2023-03-09 11:35:27,643 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 11:35:30,145 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 11:35:49,012 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 11:45:49,163 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/move_booking_api/settings.py changed, reloading.
+2023-03-09 11:46:58,806 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 11:58:27,316 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:00:12,235 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:00:18,941 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:03:53,935 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/move_booking_api/settings.py changed, reloading.
+2023-03-09 12:03:55,890 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:03:55,890 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:03:59,205 WARNING views hello there
+2023-03-09 12:03:59,374 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:03:59,374 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:16:40,693 WARNING views hello there
+2023-03-09 12:16:40,725 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:16:40,725 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:20:27,093 WARNING views hello there
+2023-03-09 12:20:27,097 INFO basehttp "GET / HTTP/1.1" 200 263
+2023-03-09 12:20:27,097 INFO basehttp "GET / HTTP/1.1" 200 263
+2023-03-09 12:20:29,826 INFO basehttp "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 200 540434
+2023-03-09 12:20:29,826 INFO basehttp "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 200 540434
+2023-03-09 12:27:37,450 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 12:27:37,450 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 12:27:39,962 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:27:39,962 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:27:57,445 WARNING views the users ip address is 127.0.0.1
+2023-03-09 12:27:57,746 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:27:57,746 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:36:34,841 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 12:36:34,841 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 12:36:35,467 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:36:35,467 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:36:36,928 WARNING views UserIP   127.0.0.1 , Acessing  movie.index
+2023-03-09 12:36:36,969 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:36:36,969 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:37:42,986 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 12:37:42,986 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 12:37:43,534 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:37:43,534 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 12:37:46,751 INFO views UserIP   127.0.0.1 , Acessing  movie.index
+2023-03-09 12:37:46,784 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 12:37:46,784 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 13:33:47,072 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:33:47,072 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:33:47,628 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:33:47,628 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:34:27,528 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:34:27,528 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:34:28,047 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:34:28,047 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:34:41,792 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:34:41,792 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:34:42,224 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:34:42,224 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:35:05,502 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:35:05,502 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:35:05,974 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:35:05,974 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:35:24,241 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:35:24,241 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:35:24,906 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:35:24,906 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:35:31,653 INFO views UserIP   127.0.0.1 , Acessing  movie.index
+2023-03-09 13:35:31,733 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 13:35:31,733 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 13:41:41,198 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:41:41,198 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:41:41,658 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:41:41,658 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:48:12,269 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:48:12,269 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 13:48:12,800 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:48:12,800 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:48:17,190 INFO views UserIP   127.0.0.1 , Acessing  movie.index Device Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-09 13:48:17,228 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 13:48:17,228 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 13:48:48,609 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:48:48,609 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:55:09,012 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/move_booking_api/settings.py changed, reloading.
+2023-03-09 13:55:09,012 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/move_booking_api/settings.py changed, reloading.
+2023-03-09 13:55:09,720 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:55:09,720 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 13:55:14,599 INFO views UserIP   127.0.0.1 , Acessing  movie.index Device Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-09 13:55:14,634 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 13:55:14,634 INFO basehttp "GET / HTTP/1.1" 200 10559
+2023-03-09 14:07:20,768 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 14:07:20,768 INFO autoreload /home/barnaan/Desktop/code/movie_booking_api/movie/views.py changed, reloading.
+2023-03-09 14:07:21,391 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 14:07:21,391 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 18:08:29,749 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 18:08:29,749 INFO autoreload Watching for file changes with StatReloader
+2023-03-09 18:09:08,832 INFO views UserIP   192.168.0.5 , Acessing , movie.index Device Mozilla/5.0 (Linux; Android 10; TECNO KE5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36
+2023-03-09 18:09:08,905 INFO basehttp "GET / HTTP/1.1" 200 10561
+2023-03-09 18:09:08,905 INFO basehttp "GET / HTTP/1.1" 200 10561
+2023-03-09 18:09:10,070 WARNING log Not Found: /favicon.ico
+2023-03-09 18:09:10,070 WARNING log Not Found: /favicon.ico
+2023-03-09 18:09:10,071 WARNING basehttp "GET /favicon.ico HTTP/1.1" 404 4208
+2023-03-09 18:09:10,071 WARNING basehttp "GET /favicon.ico HTTP/1.1" 404 4208
+2023-03-09 18:11:05,268 INFO views UserIP   192.168.0.5 , Acessing , movie.index Device Mozilla/5.0 (Linux; Android 10; TECNO KE5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36
+2023-03-09 18:11:05,278 INFO basehttp "GET / HTTP/1.1" 200 10561
+2023-03-09 18:11:05,278 INFO basehttp "GET / HTTP/1.1" 200 10561
+2023-03-09 18:21:16,471 INFO views UserIP   127.0.0.1 , Acessing , movie.index Device 
+2023-03-09 18:23:11,304 INFO views UserIP   127.0.0.1 , Acessing , movie.index Device 
+2023-03-09 18:28:07,620 INFO views UserIP   127.0.0.1 , Acessing , movie.index Device 
+2023-03-09 18:28:43,834 INFO views UserIP   127.0.0.1 , Acessing , movie.index Device 

@@ -4,7 +4,7 @@ from django.db import models
 
 class Cast(models.Model):
     name = models.CharField(max_length=50)
-    image = models.ImageField(blank=True,null=True,upload_to='movie/cast/')
+    image = models.ImageField(blank=True,null=True)
     about = models.CharField(max_length=200,null =True)
     role = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add = True)

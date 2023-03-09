@@ -28,10 +28,10 @@ def add_cinema(request):
 
 
 @api_view(['POST'])
-@permission_classes([IsAdminUser])
+# @permission_classes([IsAdminUser])
 def add_city(request):
-     
-    City.objects.create()
+    print(request.POST)
+    # City.objects.create()
     return HttpResponse('You have added new city')
 
 
